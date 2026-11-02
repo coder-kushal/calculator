@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(var(--angle), rgb(9, 121, 141), rgb(1, 21, 48));
+    height: 400px;
+    width: 250px;
+    animation: background 8s linear infinite; 
+    justify-content: space-evenly;
+    user-select: none;
+    border-radius: 18px;
+    border: 3px solid black;
+    box-shadow: 4px 4px 10px rgb(27, 27, 27);
+}
+@keyframes background {
+    to {
+        --angle: 360deg;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+
+}
+
+.buttons button {
+    background-color: rgba(63, 55, 55, 0.4);
+    border: 2px solid black;
+    box-sizing: border-box;
+    height: 45px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgb(27, 27, 27);
+    border-radius: 6px;
+    transition: 0.1s;
+}
+
+.buttons .smallBtn {
+    width: 50px;
+}
+
+.buttons .largeBtn {
+    width: 106px;
+}
+
+.buttons .delete img{
+    width: 35px;
+    height: auto;
+}
+
+.buttons button:hover {
+    border: 2.5px solid white;
+    background-color: transparent;
+}
+
+#display {
+    width: 218px;
+    height: 70px;
+    background: rgb(22, 22, 22);
+    border: 2px solid rgb(180, 215, 216);
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    text-align: right;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+}

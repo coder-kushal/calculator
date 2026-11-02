@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" id="display" disabled>
+        </div>
+        <div class="buttons">
+            <button class="largeBtn" onclick="allClear()">AC</button>
+            <button class="smallBtn delete" onclick="singleDelete()"><img src="delete.svg" alt="DEL"></button>
+            <button class="smallBtn" onclick="append('+')">+</button>
+            <button class="smallBtn" onclick="append('7')">7</button>
+            <button class="smallBtn" onclick="append('8')">8</button>
+            <button class="smallBtn" onclick="append('9')">9</button>
+            <button class="smallBtn" onclick="append('-')">-</button>
+            <button class="smallBtn" onclick="append('4')">4</button>
+            <button class="smallBtn" onclick="append('5')">5</button>
+            <button class="smallBtn" onclick="append('6')">6</button>
+            <button class="smallBtn" onclick="append('*', '×')">×</button>
+            <button class="smallBtn" onclick="append('1')">1</button>
+            <button class="smallBtn" onclick="append('2')">2</button>
+            <button class="smallBtn" onclick="append('3')">3</button>
+            <button class="smallBtn" onclick="append('/', '÷')">÷</button>
+            <button class="smallBtn" onclick="append('0')">0</button>
+            <button class="smallBtn" onclick="append('.')">.</button>
+            <button class="largeBtn" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
